@@ -45,3 +45,28 @@ let miPeli: Pelicula = new Pelicula("Hola y adios", 20);
 
 miPeli.play();
 miPeli.stop();
+
+//Decoradores
+function Decorador(cls : Function) {
+    console.log("Buenos dias, soy el Decorador")
+}
+@Decorador
+class Speaker{
+
+}
+
+//Genericos
+function genericReceptor<T>(obj :T) : T {
+    return obj;
+}
+let cadena = genericReceptor<string>("Hola");
+let numero = genericReceptor<number>(10);
+
+
+class Printer<T>{
+    printAll(arr :T[]){
+        console.log(arr.length)
+    }
+}
+let printer: Printer<number> = new Printer();
+printer.printAll([1,2]);
