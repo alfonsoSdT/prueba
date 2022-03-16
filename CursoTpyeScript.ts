@@ -62,7 +62,7 @@ function genericReceptor<T>(obj :T) : T {
 let cadena = genericReceptor<string>("Hola");
 let numero = genericReceptor<number>(10);
 
-
+//Genericos parte 2
 class Printer<T>{
     printAll(arr :T[]){
         console.log(arr.length)
